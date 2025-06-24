@@ -10,6 +10,11 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  color: red;
+}
+
+html[dir='rtl'] .cards > ul > li {
+  color: green;
 }
 
 .cards .cards-card-body {
@@ -24,4 +29,11 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+@media only screen and (width <= 600px) {
+  .cards > ul > li {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
